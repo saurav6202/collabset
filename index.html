@@ -10,6 +10,27 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
+    <style>
+        /* Navbar background behavior */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+
+        header.scrolled-up {
+            background: black;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 70px;
+            /* add top padding so content isn't hidden behind fixed header */
+        }
+    </style>
 
 </head>
 
@@ -82,4 +103,5 @@
 </body>
 
 </html>
+
 

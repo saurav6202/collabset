@@ -11,21 +11,13 @@
 }
 
 header {
-    /* background-color: var(--purple); */
-    /* background: linear-gradient(135deg, var(--purple) 0%, var(--light-purple) 100%); */
-
     background: transparent;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
     transition: background 0.4s ease, box-shadow 0.4s ease;
-    /* background: transparent; */
-    /* box-shadow: none; */
-
-    /* box-shadow: none; */
 }
 
 .header-container {
@@ -42,7 +34,7 @@ header {
 }
 
 .logo img {
-    height: 3rem;
+    height: 2.8rem;
 }
 
 .logo span {
@@ -56,6 +48,13 @@ header {
 }
 
 /* hamburger */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* hamburger */
 .hamburger {
     width: 460px;
     height: 60px;
@@ -63,13 +62,16 @@ header {
     border-radius: 5px;
     overflow: hidden;
     position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
 }
 
 .hamburger li {
     width: 100px;
     height: 60px;
     background: #8B45EA;
-
     position: absolute;
     right: 0;
     /* anchor to right */
@@ -91,17 +93,20 @@ header {
     text-decoration: none;
     color: var(--gray);
     font-weight: 501;
+    white-space: nowrap;
 }
 
 .hamburger li a:hover {
     color: #FFD700;
 }
 
+/* Adjustments for the smaller hamburger icon */
 .hamburger li:first-child {
     padding-right: 0;
     z-index: 10;
     opacity: 1;
-    width: 60px;
+    /* Reduced the width of the button container */
+    width: 40px;
     transform: translateX(0);
 }
 
@@ -112,26 +117,39 @@ header {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 30px 15px 30px 0;
+    /* Adjusted border width to match new container size */
+    border-width: 30px 10px 30px 0;
     border-color: transparent #8B45EA transparent transparent;
     /* arrow pointing left */
-    left: -15px;
+    left: -10px;
     top: 0;
 }
 
+#menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Adjusted the bar size and spacing */
 #menu-button .bar {
-    width: 20px;
+    width: 18px;
     height: 2px;
     background: var(--gray);
     transition: 0.3s linear;
+    border-radius: 1px;
 }
 
 #menu-button .bar:nth-child(2) {
-    margin: 5px 0;
+    margin: 4px 0;
 }
 
+/* Adjusted the transform values for the 'X' effect */
 #menu-button.active .bar:first-child {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(5.5px) rotate(45deg);
 }
 
 #menu-button.active .bar:nth-child(2) {
@@ -139,7 +157,7 @@ header {
 }
 
 #menu-button.active .bar:last-child {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-5.5px) rotate(-45deg);
 }
 
 @media screen and (max-width:467px) {
@@ -157,25 +175,25 @@ header {
 
 /* offsets for each item when menu is active */
 .hamburger.active #signup {
-    right: 410px;
+    right: 390px;
     opacity: 1;
     z-index: 10;
 }
 
 .hamburger.active #login {
-    right: 310px;
+    right: 290px;
     opacity: 1;
     z-index: 8;
 }
 
 .hamburger.active #services {
-    right: 210px;
+    right: 190px;
     opacity: 1;
     z-index: 6;
 }
 
 .hamburger.active #about {
-    right: 110px;
+    right: 90px;
     opacity: 1;
     z-index: 4;
 }

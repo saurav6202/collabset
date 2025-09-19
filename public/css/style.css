@@ -1,0 +1,43 @@
+/* components */
+@import url("./components/footer.css");
+@import url("./components/header.css");
+@import url("./components/button.css");
+/* pages */
+@import url("./pages/home.css");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@509&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap');
+
+:root {
+    --purple: #6A0DAD;
+    --gold: #FFD700;
+    --white: #FFFFFF;
+    --light-purple: #8B45EA;
+    --dark-purple: #4D0A7C;
+    --light-gold: #FFE44D;
+    --dark-gold: #E6C300;
+    --gray: #F5F5F5;
+    --dark-gray: #05000f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-gray);
+    background: linear-gradient(135deg, var(--purple) 0%, var(--light-purple) 100%);
+
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,35 @@
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--gold);
+    color: var(--purple);
+}
+
+.btn-primary:hover {
+    background-color: var(--light-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--gold);
+}
+
+.btn-secondary:hover {
+    background-color: var(--gold);
+    color: var(--purple);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

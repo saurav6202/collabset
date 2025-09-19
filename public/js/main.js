@@ -1,8 +1,7 @@
-const menu = document.querySelector('#menu');
-const menuButton = document.querySelector('#menu-button');
-const ul = document.querySelector('.wrapper ul');
+const menuButton = document.getElementById('menu-button');
+const hamburgerList = document.querySelector('.hamburger');
 
-menu.addEventListener('click', () => {
+menuButton.addEventListener('click', () => {
   menuButton.classList.toggle('active');
-  ul.classList.toggle('active');
+  hamburgerList.classList.toggle('active');
 });
